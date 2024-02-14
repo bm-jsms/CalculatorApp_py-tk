@@ -28,8 +28,15 @@ class Calculator:
                 col = 0
                 row += 1
 
+    def clear_display(self):
+        self.display.delete(0, "end")
+
     def build_button(self, value, row, col):
-        b = tk.Button(self.main, text=value, width=5, bg="#4e4e4e", fg="white", bd=5)
+        if value == "C":
+            b = tk.Button(self.main, text=value, width=5, command=self.clear_display, bg="#ff0018", fg="white", bd=3)
+        else:
+            b = tk.Button(self.main, text=value, width=5, bg="#0563af", fg="white",bd=5)
+
         b.grid(row=row, column=col)
 
 
