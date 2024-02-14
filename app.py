@@ -29,7 +29,7 @@ class Calculator:
                 row += 1
 
     def build_button(self, value, row, col):
-        b = tk.Button(self.main, text=value)
+        b = tk.Button(self.main, text=value, width=5, bg="#4e4e4e", fg="white", bd=5)
         b.grid(row=row, column=col)
 
 
