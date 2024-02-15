@@ -6,8 +6,7 @@ root = tk.Tk()
 class Calculator:
     def __init__(self, main):
         self.main = main
-        self.display = tk.Entry(main, width=15, font=(
-            "Arial", 16), bg="#01145d", fg="white", bd=10, insertwidth=1, justify="right")
+        self.display = tk.Entry(main, width=15, font=("Arial", 16), bg="#01145d", fg="white", bd=10, insertwidth=1, justify="right")
         self.display.grid(row=0, column=0, columnspan=4)
         self.op_verification = False
         self.current = ""
