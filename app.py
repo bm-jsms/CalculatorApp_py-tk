@@ -6,8 +6,7 @@ root = tk.Tk()
 class Calculator:
     def __init__(self, main):
         self.main = main
-        self.display = tk.Entry(main, width=15, font=(
-            "Arial", 16), bg="#01145d", fg="white", bd=10, insertwidth=1, justify="right")
+        self.display = tk.Entry(main, width=15, font=("Arial", 16), bg="#01145d", fg="white", bd=10, insertwidth=1, justify="right")
         self.display.grid(row=0, column=0, columnspan=4)
         self.op_verification = False
         self.current = ""
@@ -81,14 +80,11 @@ class Calculator:
 
     def build_button(self, value, row, col):
         if value == "C":
-            b = tk.Button(self.main, text=value, width=5, command=lambda: self.clear_display(
-            ), bg="#ff0018", fg="white", bd=3)
+            b = tk.Button(self.main, text=value, width=5, command=lambda: self.clear_display(), bg="#ff0018", fg="white", bd=3)
         elif value == "=":
-            b = tk.Button(self.main, text=value, width=5, bg="#1f8a0f",
-                          fg="white", bd=5, command=lambda: self.calculate())
+            b = tk.Button(self.main, text=value, width=5, bg="#1f8a0f", fg="white", bd=5, command=lambda: self.calculate())
         else:
-            b = tk.Button(self.main, text=value, width=5, bg="#0563af",
-                          fg="white", bd=5, command=lambda: self.click(value))
+            b = tk.Button(self.main, text=value, width=5, bg="#0563af", fg="white", bd=5, command=lambda: self.click(value))
 
         b.grid(row=row, column=col)
 
