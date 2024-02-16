@@ -25,7 +25,6 @@ class Calculator:
         ]
 
         for button in buttons:
-            print(f"Button: {button}")
             self.build_button(button, row, col)
             col += 1
             if col > 3:
