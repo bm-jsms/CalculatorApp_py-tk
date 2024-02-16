@@ -49,7 +49,7 @@ class Calculator:
                 self.total += float(self.current)
 
         self.display.delete(0, "end")
-        self.display.insert(0, self.total)
+        self.display.insert(0, round(self.total, 3))
 
     def click(self, button):
 
