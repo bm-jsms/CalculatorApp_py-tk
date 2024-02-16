@@ -31,6 +31,16 @@ class Calculator:
                 col = 0
                 row += 1
 
+        self.main.bind("<Key>", self.key_input)
+
+    def key_input(self, event):
+        if event.char in "0123456789./*-+":
+            self.click(event.char)
+        elif event.char == "\r":
+            self.calculate()
+        elif event.char == "\x08":
+            self.clear_display()
+
     def clear_display(self):
         self.display.delete(0, "end")
         self.op_verification = False
