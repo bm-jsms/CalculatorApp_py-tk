@@ -70,12 +70,6 @@ class Calculator:
             self.op_verification = True
             self.op = button
 
-        print(f"\n[+] You press: {button}")
-        print(f"[+] Current: {self.current}")
-        print(f"[+] Op Verification: {self.op_verification}")
-        print(f"[+] Op: {self.op}")
-        print(f"[+] Total: {self.total}")
-
     def build_button(self, value, row, col):
         if value == "C":
             b = tk.Button(self.main, text=value, width=5, command=lambda: self.clear_display(
