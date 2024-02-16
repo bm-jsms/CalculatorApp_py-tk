@@ -91,6 +91,8 @@ class Calculator:
 
 root.title("Calculator")
 
+root.configure(bg="#01145d")
+
 my_calc = Calculator(root)
 
 
