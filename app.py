@@ -89,11 +89,12 @@ class Calculator:
         b.grid(row=row, column=col)
 
 
-root.title("Calculator")
+if __name__ == "__main__":
+    root.title("Calculator")
 
-root.configure(bg="#01145d")
+    root.configure(bg="#01145d")
 
-my_calc = Calculator(root)
+    my_calc = Calculator(root)
 
-
-root.mainloop()
+    root.mainloop()
+    
